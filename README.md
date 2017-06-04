@@ -17,3 +17,11 @@ Connect to cluster with additional JAR's:
 ```
 spark-shell spark://DOCKER_HOST_IP:7077 --jars mysql-connector-java-5.1.42/mysql-connector-java-5.1.42-bin.jar
 ```
+
+### Running Scala applications
+
+```
+spark-submit --master spark://MASTER_IP:MASTER_PORT --class "example.Hello" path/to/package.jar
+```
+
+jar must be packaged with all it's dependencies by sbt package
